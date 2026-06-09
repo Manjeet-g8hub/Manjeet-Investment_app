@@ -8,7 +8,6 @@ try:
     st.title("Your Personalised AI Investment Assistant")
     
     st.title("_AI_ is :blue[cool] :sunglasses:")
-    # Input fields for height and weight
     name = st.text_input("* Enter Your name", key="name")
     inv = st.slider("Enter Your investment amount",  min_value=100000, max_value= 100000000, step=100000)
     age = st.slider("Enter your Age:", min_value=18, max_value= 60, step=1)
@@ -16,15 +15,11 @@ try:
 
     inv2 = st.number_input()
     
-
-    # Calculate BMI
-    if st.button("Share Stratigy"):
+    if st.button("Share Strategy"):
         if not name.strip():
             st.error("Please enter your name.")
         
         else:
-            # bmi = wt / (ht ** 2)
-            # st.write(f"Your BMI is: {bmi:.2f}")
             prompt = f"Greet {name} and Act like an investment expert, share the investment stratagy based on the amount {inv}, over {time} horizon depending on the age {age}"
         
             # Generate content from Gemini
