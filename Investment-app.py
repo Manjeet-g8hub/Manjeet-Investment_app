@@ -22,12 +22,16 @@ try:
             prompt = f"Greet {name} and Act like an investment expert, share the investment stratagy based on the amount {inv}, over {time} horizon depending on the age {age}"
         
             # Generate content from Gemini
-with st.spinner("🤖 AI is generating your personalized investment strategy... Please wait..."):
+            with st.spinner("🤖 AI is generating your personalized investment strategy... Please wait..."):
 
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
+             response = client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt
     )
 
-st.success("✅ Strategy generated successfully!")
-st.write(response.text)
+            st.success("✅ Strategy generated successfully!")
+            st.write(response.text)
+
+except Exception as e:
+    st.error(f"An error occurred: {e}")
+    
