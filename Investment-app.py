@@ -14,7 +14,7 @@ try:
     age = st.slider("Enter your Age:", min_value=18, max_value= 60, step=1)
     time = st.slider("Enter your time horizon:", min_value=5, max_value= 30, step=1)
     
-    if st.button("Share Strategy"):
+    if st.button("Share Investment Strategy"):
         if not name.strip():
             st.error("Please enter your name.")
         
