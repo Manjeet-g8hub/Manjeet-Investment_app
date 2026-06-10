@@ -5,14 +5,14 @@ try:
     google_api_key = st.secrets["google"]["api_key"]
     client = genai.Client(api_key = google_api_key)
     
-    st.title("Your Personalised AI Investment Assistant")
+    st.title("💰 Your Personalised AI Investment Assistant")
     
-    st.title("_AI_ is :blue[cool] :sunglasses:")
+    st.title("_AI_ is :blue[cool] 📈")
     # Input fields for name, inv amt, age and time horizon
     name = st.text_input("* Enter Your name", key="name")
     inv = st.slider("Enter Your investment amount",  min_value=100000, max_value= 100000000, step=100000)
     age = st.slider("Enter your Age:", min_value=18, max_value= 60, step=1)
-    time = st.slider("Enter your time horizon:", min_value=5, max_value= 30, step=1)
+    time = st.slider("Enter your time horizon(Years):", min_value=5, max_value= 30, step=1)
     
     if st.button("Share Investment Strategy"):
         if not name.strip():
