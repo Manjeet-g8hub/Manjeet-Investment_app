@@ -10,10 +10,10 @@ try:
     st.title("_AI_ is :blue[cool] :sunglasses:")
     # Input fields for height and weight
     name = st.text_input("* Enter Your name", key="name")
-    inv = st.number_input("Enter Your investment amount", key= "inv")
+    inv = st.slider("Enter Your investment amount",  min_value=100000, max_value= 100000000, step=100000)
     age = st.slider("Enter your Age:", min_value=18, max_value= 60, step=1)
-    time = st.slider("Enter your time horizon:", min_value=100000, max_value= 100000000, step=100000)
-    
+    time = st.slider("Enter your time horizon:", min_value=5, max_value= 30, step=1)
+        
 
     # Calculate BMI
     if st.button("Share Stratigy"):
